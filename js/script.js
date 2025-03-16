@@ -49,81 +49,117 @@ document.addEventListener("scroll", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuContainer = document.getElementById("menu-container");
+  const filterButtons = document.querySelectorAll(".filter-btn");
   const cartContainer = document.getElementById("cart-items");
   const cartTotal = document.getElementById("cart-total");
   const clearCartBtn = document.getElementById("clear-cart");
+  const cartPopup = document.getElementById("cart-popup");
+  const cartButton = document.getElementById("cart-button");
+  const closeCartButton = document.getElementById("close-cart");
 
   let cart = [];
 
-  // Use menuData from data.js
-  displayMenu(menuData);
+  // Sample Menu Data
+  const menuData = [
+      { id: 1, name: "Grilled Shrimp", description: "Delicious shrimp with garlic butter.", price: 12.99, category: "lunch", image: "shrimp.jpg" },
+      { id: 2, name: "Lobster Tail", description: "Juicy lobster tail with lemon butter sauce.", price: 19.99, category: "lunch", image: "lobster.jpg" },
+      { id: 3, name: "Caesar Salad", description: "Fresh romaine lettuce with parmesan and croutons.", price: 9.99, category: "salad", image: "salad.jpg" },
+      { id: 4, name: "Crab Salad", description: "Crab meat with avocado and fresh greens.", price: 11.99, category: "salad", image: "crab-salad.jpg" },
+      { id: 5, name: "Cheesecake", description: "Classic cheesecake with berry sauce.", price: 7.99, category: "dessert", image: "cheesecake.jpg" },
+      { id: 6, name: "Chocolate Lava Cake", description: "Warm chocolate cake with melted center.", price: 8.99, category: "dessert", image: "lava-cake.jpg" }
+  ];
 
-  function displayMenu(menu) {
-    menuContainer.innerHTML = ""; // Clear previous content
-    menu.forEach(item => {
-      const menuItem = document.createElement("div");
-      menuItem.classList.add("menu-item");
+  // Display menu items based on category
+  function displayMenu(category) {
+      menuContainer.innerHTML = ""; // Clear previous items
+      const filteredMenu = menuData.filter(item => item.category === category);
 
-      menuItem.innerHTML = `
-        <img src="${item.image}" alt="${item.name}">
-        <h3>${item.name}</h3>
-        <p>${item.description}</p>
-        <p>Price: $${item.price.toFixed(2)}</p>
-      `;
+      filteredMenu.forEach(item => {
+          const menuItem = document.createElement("div");
+          menuItem.classList.add("bg-white", "p-4", "rounded-lg", "shadow-lg", "text-center");
 
-      const addButton = document.createElement("button");
-      addButton.textContent = "Add to Cart";
-      addButton.addEventListener("click", () => addToCart(item.id, item.name, item.price));
-      menuItem.appendChild(addButton);
+          menuItem.innerHTML = `
+              <img src="${item.image}" alt="${item.name}" class="w-full h-40 object-cover rounded-md mb-4">
+              <h3 class="text-xl font-semibold">${item.name}</h3>
+              <p class="text-gray-600">${item.description}</p>
+              <p class="text-lg font-bold text-blue-600">Price: $${item.price.toFixed(2)}</p>
+              <button class="mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700" onclick="addToCart(${item.id}, '${item.name}', ${item.price})">
+                  Add to Cart
+              </button>
+          `;
 
-      menuContainer.appendChild(menuItem);
-    });
+          menuContainer.appendChild(menuItem);
+      });
   }
+
+  // Event listeners for filter buttons
+  filterButtons.forEach(button => {
+      button.addEventListener("click", function () {
+          const category = this.getAttribute("data-category");
+          displayMenu(category);
+      });
+  });
+
+  // Show default category (Lunch) when page loads
+  displayMenu("lunch");
 
   // Add item to cart
-  function addToCart(id, name, price) {
-    const existingItem = cart.find(item => item.id === id);
-    if (existingItem) {
-      existingItem.quantity += 1;
-    } else {
-      cart.push({ id, name, price, quantity: 1 });
-    }
-    updateCart();
-  }
+  window.addToCart = function (id, name, price) {
+      const existingItem = cart.find(item => item.id === id);
+      if (existingItem) {
+          existingItem.quantity += 1;
+      } else {
+          cart.push({ id, name, price, quantity: 1 });
+      }
+      updateCart();
+  };
 
   // Remove item from cart
   function removeFromCart(id) {
-    cart = cart.filter(item => item.id !== id);
-    updateCart();
+      cart = cart.filter(item => item.id !== id);
+      updateCart();
   }
 
   // Update cart display
   function updateCart() {
-    cartContainer.innerHTML = "";
-    let total = 0;
+      cartContainer.innerHTML = "";
+      let total = 0;
 
-    cart.forEach(item => {
-      total += item.price * item.quantity;
+      cart.forEach(item => {
+          total += item.price * item.quantity;
 
-      const cartItem = document.createElement("li");
-      cartItem.innerHTML = `
-        ${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}
-      `;
+          const cartItem = document.createElement("li");
+          cartItem.classList.add("flex", "justify-between", "items-center", "border-b", "py-2");
 
-      const removeButton = document.createElement("button");
-      removeButton.textContent = "Remove";
-      removeButton.addEventListener("click", () => removeFromCart(item.id));
-      cartItem.appendChild(removeButton);
+          cartItem.innerHTML = `
+              <span>${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}</span>
+          `;
 
-      cartContainer.appendChild(cartItem);
-    });
+          const removeButton = document.createElement("button");
+          removeButton.textContent = "Remove";
+          removeButton.classList.add("bg-red-500", "text-white", "px-2", "py-1", "rounded", "hover:bg-red-600");
+          removeButton.addEventListener("click", () => removeFromCart(item.id));
 
-    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+          cartItem.appendChild(removeButton);
+          cartContainer.appendChild(cartItem);
+      });
+
+      cartTotal.textContent = `Total: $${total.toFixed(2)}`;
   }
 
   // Clear cart
   clearCartBtn.addEventListener("click", () => {
-    cart = [];
-    updateCart();
+      cart = [];
+      updateCart();
+  });
+
+  // Show cart popup
+  cartButton.addEventListener("click", () => {
+      cartPopup.classList.remove("hidden");
+  });
+
+  // Close cart popup
+  closeCartButton.addEventListener("click", () => {
+      cartPopup.classList.add("hidden");
   });
 });
