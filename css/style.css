@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Arial", sans-serif;
+    font-family: "Plus Jakarta Sans", serif;
+    height:3000px;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.swing-animation {
+    animation: swing 2s linear infinite;
+}
+
+@media(max-width:768px) {
+
+    .mobile-menu, .header {
+        background-color: #0d1323;
+    }
+    .home-content{
+        margin-top:25%;
+    }
+}
+@media(max-width:500px) {
+
+    .home-content{
+        margin-top: 40%;
+    }
+}
