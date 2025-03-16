@@ -663,6 +663,10 @@ video {
   inset: 0px;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .bottom-\[10\%\] {
   bottom: 10%;
 }
@@ -679,12 +683,24 @@ video {
   left: 0px;
 }
 
-.right-11 {
-  right: 2.75rem;
+.left-5 {
+  left: 1.25rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.right-8 {
+  right: 2rem;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-5 {
+  top: 1.25rem;
 }
 
 .isolate {
@@ -705,6 +721,10 @@ video {
 
 .z-30 {
   z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .z-50 {
@@ -768,6 +788,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -778,6 +802,10 @@ video {
 
 .mt-9 {
   margin-top: 2.25rem;
+}
+
+.mt-\[95px\] {
+  margin-top: 95px;
 }
 
 .box-border {
@@ -879,6 +907,10 @@ video {
   display: none;
 }
 
+.h-\[70px\] {
+  height: 70px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -887,8 +919,16 @@ video {
   width: 35px;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .w-\[45px\] {
   width: 45px;
+}
+
+.w-\[70px\] {
+  width: 70px;
 }
 
 .w-\[90\%\] {
@@ -1845,6 +1885,10 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-b-\[5px\] {
+  border-bottom-width: 5px;
+}
+
 .border-e {
   border-inline-end-width: 1px;
 }
@@ -1853,8 +1897,16 @@ video {
   border-left-width: 1px;
 }
 
+.border-l-\[5px\] {
+  border-left-width: 5px;
+}
+
 .border-r {
   border-right-width: 1px;
+}
+
+.border-r-\[5px\] {
+  border-right-width: 5px;
 }
 
 .border-s {
@@ -1863,6 +1915,10 @@ video {
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-t-\[5px\] {
+  border-top-width: 5px;
 }
 
 .border-solid {
@@ -2141,10 +2197,6 @@ video {
   vertical-align: super;
 }
 
-.text-\[18px\] {
-  font-size: 18px;
-}
-
 .text-\[26px\] {
   font-size: 26px;
 }
@@ -2163,12 +2215,12 @@ video {
   line-height: 1.75rem;
 }
 
-.text-\[22px\] {
-  font-size: 22px;
+.text-\[18px\] {
+  font-size: 18px;
 }
 
-.text-\[20px\] {
-  font-size: 20px;
+.text-\[16px\] {
+  font-size: 16px;
 }
 
 .font-bold {
@@ -2259,10 +2311,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[22x\] {
-  color: 22x;
 }
 
 .underline {
@@ -2569,6 +2617,22 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -2667,6 +2731,12 @@ video {
   }
 }
 
+.hover\:scale-95:hover {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-\[\#D75838\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(215 88 56 / var(--tw-bg-opacity, 1));
@@ -2718,8 +2788,16 @@ video {
     display: none;
   }
 
+  .md\:w-\[430px\] {
+    width: 430px;
+  }
+
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-\[40\%\] {
+    width: 40%;
   }
 
   .md\:flex-row {
@@ -2746,14 +2824,50 @@ video {
     font-size: 20px;
   }
 
+  .md\:text-\[30px\] {
+    font-size: 30px;
+  }
+
   .md\:text-\[35px\] {
     font-size: 35px;
+  }
+
+  .md\:text-\[16px\] {
+    font-size: 16px;
+  }
+
+  .md\:text-\[1px\] {
+    font-size: 1px;
+  }
+
+  .md\:text-\[18px\] {
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1024px) {
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:w-\[600px\] {
+    width: 600px;
+  }
+
+  .lg\:gap-\[10px\] {
+    gap: 10px;
+  }
+
   .lg\:text-\[20px\] {
     font-size: 20px;
+  }
+
+  .lg\:text-\[28px\] {
+    font-size: 28px;
   }
 
   .lg\:text-\[30px\] {
@@ -2764,12 +2878,26 @@ video {
     font-size: 55px;
   }
 
-  .lg\:text-\[25px\] {
-    font-size: 25px;
+  .lg\:text-\[18px\] {
+    font-size: 18px;
   }
 
-  .lg\:text-\[22px\] {
-    font-size: 22px;
+  .lg\:text-\[1px\] {
+    font-size: 1px;
+  }
+
+  .lg\:text-\[16px\] {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .xl\:text-\[40px\] {
+    font-size: 40px;
   }
 }
 
