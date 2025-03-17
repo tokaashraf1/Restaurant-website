@@ -62,7 +62,7 @@
     <button id="wishlist-button"  class=" flex items-center justify-center fixed bottom-[10%] right-8 z-30 rounded-full bg-[#D75838] px-2 py-2 w-[50px] hover:bg-[#b74a2f]"><img src="./img/favorite.png" class="w-[32px]"></button>
 
 <!-- about section -->
-    <section class="w-full pb-[30px] md:pb-[200px]">
+    <section class="w-full pb-[30px] md:pb-[100px]">
        <div class="w-[90%] mx-auto flex flex-col md:flex-row justify-between mt-[95px]">
 <div class="break-words md:w-[40%]">
 <h1 class="xl:text-[40px] lg:text-[28px] text-[30px] font-semibold">Fresh from the Ocean,Served with Passion </h1>
@@ -99,26 +99,26 @@
     </section>
 
      <!-- Menu Section -->
-     <section id="menu" class="py-12">
+     <section id="menu" class="py-12 bg-[#F1F8E7]">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Menu</h2>
-
+            <h2 class="text-4xl font-bold  mb-4  ">Our Menu</h2>
+  
             <!-- Menu Buttons -->
-            <div class="flex justify-center space-x-4 mb-8">
-                <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="lunch">Lunch</button>
-                <button class="filter-btn bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" data-category="salad">Salads</button>
-                <button class="filter-btn bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" data-category="dessert">Desserts</button>
+            <div class="flex justify-center space-x-4 mb-8 mt-5">
+                <button class="filter-btn border border-[#D75838]  rounded-full px-4 py-2 hover:bg-[#D75838]" data-category="lunch">Dishes</button>
+                <button class="filter-btn  border border-[#D75838]  rounded-full px-4 py-2  hover:bg-[#D75838]" data-category="salad">Salads</button>
+                <button class="filter-btn  border border-[#D75838]  rounded-full px-4 py-2  hover:bg-[#D75838]" data-category="dessert">Desserts</button>
             </div>
 
             <!-- Menu Items -->
-            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
+            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 ">
                 <!-- Items will be inserted dynamically -->
             </div>
         </div>
     </section>
 
     <!-- Cart Popup -->
-    <div id="cart-popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
+    <div id="cart-popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-40">
         <div class="bg-white p-6 rounded-lg shadow-lg w-80">
             <h3 class="text-xl font-bold mb-4">Your Cart</h3>
             <ul id="cart-items" class="space-y-2"></ul>
@@ -129,7 +129,7 @@
     </div>
 
     <!-- Wishlist Popup -->
-    <div id="wishlist-popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center overflow-auto">
+    <div id="wishlist-popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center overflow-auto z-40">
         <div class="bg-white p-6 rounded-lg shadow-lg w-80">
             <h3 class="text-xl font-bold mb-4">Your Wishlist</h3>
             <ul id="wishlist-items" class="space-y-2"></ul>
