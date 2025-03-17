@@ -2295,6 +2295,30 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-\[\] {
+  padding-bottom: ;
+}
+
+.pb-\[50px\] {
+  padding-bottom: 50px;
+}
+
+.pb-\[100px\] {
+  padding-bottom: 100px;
+}
+
+.pb-\[px\] {
+  padding-bottom: px;
+}
+
+.pb-\[200px\] {
+  padding-bottom: 200px;
+}
+
+.pb-\[30px\] {
+  padding-bottom: 30px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3013,6 +3037,10 @@ video {
 
   .md\:gap-11 {
     gap: 2.75rem;
+  }
+
+  .md\:pb-\[200px\] {
+    padding-bottom: 200px;
   }
 
   .md\:text-\[20px\] {
