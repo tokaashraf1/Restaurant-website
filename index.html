@@ -58,8 +58,8 @@
 
     </section>
     <!-- cart button -->
-    <button id="cart-button" class=" flex items-center justify-center fixed bottom-[20%] right-8 z-30 rounded-full bg-green-400 px-2 py-2 w-[50px] "><img src="./img/shopping-cart (1).png" class="w-[32px]"></button>
-    <button id="wishlist-button"  class=" flex items-center justify-center fixed bottom-[10%] right-8 z-30 rounded-full bg-[#D75838] px-2 py-2 w-[50px] "><img src="./img/favorite.png" class="w-[32px]"></button>
+    <button id="cart-button" class=" flex items-center justify-center fixed bottom-[20%] right-8 z-30 rounded-full bg-green-400 px-2 py-2 w-[50px]  hover:bg-green-600 "><img src="./img/shopping-cart (1).png" class="w-[32px]"></button>
+    <button id="wishlist-button"  class=" flex items-center justify-center fixed bottom-[10%] right-8 z-30 rounded-full bg-[#D75838] px-2 py-2 w-[50px] hover:bg-[#b74a2f]"><img src="./img/favorite.png" class="w-[32px]"></button>
 
 <!-- about section -->
     <section class="w-full min-h-screen">
@@ -98,54 +98,45 @@
 
     </section>
 
-    <!-- Category Buttons -->
-    <div class="flex justify-center space-x-4 my-6">
-        <button class="filter-btn px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700" data-category="lunch">Lunch</button>
-        <button class="filter-btn px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700" data-category="salad">Salads</button>
-        <button class="filter-btn px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-700" data-category="dessert">Desserts</button>
-    </div>
+     <!-- Menu Section -->
+     <section id="menu" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Menu</h2>
 
-    <!-- Menu Container -->
-    <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-        <!-- Menu items will be inserted here -->
-    </div>
+            <!-- Menu Buttons -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="lunch">Lunch</button>
+                <button class="filter-btn bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" data-category="salad">Salads</button>
+                <button class="filter-btn bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" data-category="dessert">Desserts</button>
+            </div>
 
+            <!-- Menu Items -->
+            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
+                <!-- Items will be inserted dynamically -->
+            </div>
+        </div>
+    </section>
 
-    <!-- Cart Popup (Hidden by default) -->
-    <div id="cart-popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center  z-40">
-        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-            <h2 class="text-xl font-bold mb-4">Shopping Cart</h2>
+    <!-- Cart Popup -->
+    <div id="cart-popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+            <h3 class="text-xl font-bold mb-4">Your Cart</h3>
             <ul id="cart-items" class="space-y-2"></ul>
             <p id="cart-total" class="font-semibold mt-4">Total: $0.00</p>
-            <div class="flex justify-between mt-4">
-                <button id="clear-cart" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Clear Cart</button>
-                <button id="close-cart" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Close</button>
-            </div>
+            <button id="clear-cart" class="bg-red-500 text-white px-4 py-2 rounded mt-4">Clear Cart</button>
+            <button id="close-cart" class="bg-gray-400 text-white px-4 py-2 rounded mt-4">Close</button>
         </div>
     </div>
 
-    <div id="wishlist-popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-            <h2 class="text-xl font-bold mb-4">My Wishlist</h2>
+    <!-- Wishlist Popup -->
+    <div id="wishlist-popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center overflow-auto">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+            <h3 class="text-xl font-bold mb-4">Your Wishlist</h3>
             <ul id="wishlist-items" class="space-y-2"></ul>
-            <div class="flex justify-end mt-4">
-                <button id="close-wishlist" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Close</button>
-            </div>
+            <button id="close-wishlist" class="bg-gray-400 text-white px-4 py-2 rounded mt-4">Close</button>
         </div>
     </div>
 
-
-
-
-
-    <!-- <h1>Restaurant Menu</h1>
-    <div id="menu-container"></div>
-  <div>
-      <h2>Shopping Cart</h2>
-      <ul id="cart-items"></ul>
-      <p id="cart-total">Total: $0.00</p>
-      <button id="clear-cart">Clear Cart</button>
-  </div> -->
 
 <script src="./data/data.js"></script>
 <script src="./js/script.js"></script>

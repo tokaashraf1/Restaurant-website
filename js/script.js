@@ -65,40 +65,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Sample menu data
   const menuData = [
-      { id: 1, name: "Grilled Shrimp", category: "lunch", price: 12.99, image: "shrimp.jpg", description: "Delicious grilled shrimp." },
-      { id: 2, name: "Caesar Salad", category: "salad", price: 8.99, image: "salad.jpg", description: "Fresh Caesar salad with croutons." },
-      { id: 3, name: "Chocolate Cake", category: "dessert", price: 6.99, image: "cake.jpg", description: "Rich chocolate cake." }
-  ];
+    { id: 1, name: "Grilled Salmon", category: "lunch", price: 15.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 2, name: "Garlic Shrimp", category: "lunch", price: 12.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 3, name: "Lobster Tail", category: "lunch", price: 25.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 4, name: "Crab Legs", category: "lunch", price: 20.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 5, name: "Fried Calamari", category: "lunch", price: 10.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 6, name: "Seared Tuna", category: "lunch", price: 18.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
 
-  function displayMenu(category) {
-      menuContainer.innerHTML = "";
-      const filteredMenu = menuData.filter(item => item.category === category);
-      filteredMenu.forEach(item => {
-          const menuItem = document.createElement("div");
-          menuItem.classList.add("menu-item", "border", "p-4", "rounded-lg", "shadow-md", "bg-white");
+    { id: 7, name: "Shrimp Avocado Salad", category: "salad", price: 9.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 8, name: "Crab Caesar Salad", category: "salad", price: 10.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 9, name: "Smoked Salmon Salad", category: "salad", price: 12.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 10, name: "Tuna Poke Bowl", category: "salad", price: 11.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 11, name: "Octopus Salad", category: "salad", price: 14.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 12, name: "Seaweed Salad", category: "salad", price: 8.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
 
-          menuItem.innerHTML = `
-              <img src="${item.image}" alt="${item.name}" class="w-full h-32 object-cover rounded-md">
-              <h3 class="text-lg font-bold mt-2">${item.name}</h3>
-              <p class="text-sm">${item.description}</p>
-              <p class="font-semibold mt-2">Price: $${item.price.toFixed(2)}</p>
-          `;
+    { id: 13, name: "Lemon Butter Cake", category: "dessert", price: 6.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 14, name: "Mango Sorbet", category: "dessert", price: 5.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 15, name: "Coconut Pudding", category: "dessert", price: 7.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 16, name: "Key Lime Pie", category: "dessert", price: 6.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 17, name: "Berry Parfait", category: "dessert", price: 5.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
+    { id: 18, name: "Chocolate Lava Cake", category: "dessert", price: 7.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" }
+];
 
-          const addToCartButton = document.createElement("button");
-          addToCartButton.textContent = "Add to Cart";
-          addToCartButton.classList.add("bg-blue-600", "text-white", "px-3", "py-1", "rounded", "hover:bg-blue-700", "mt-2");
-          addToCartButton.addEventListener("click", () => addToCart(item));
 
-          const addToWishlistButton = document.createElement("button");
-          addToWishlistButton.textContent = "❤️ Wishlist";
-          addToWishlistButton.classList.add("bg-purple-600", "text-white", "px-3", "py-1", "rounded", "hover:bg-purple-700", "mt-2", "ml-2");
-          addToWishlistButton.addEventListener("click", () => addToWishlist(item));
+function displayMenu(category) {
+  menuContainer.innerHTML = "";
+  const filteredMenu = menuData.filter(item => item.category === category);
 
-          menuItem.appendChild(addToCartButton);
-          menuItem.appendChild(addToWishlistButton);
-          menuContainer.appendChild(menuItem);
-      });
-  }
+  filteredMenu.forEach(item => {
+    const menuItem = document.createElement("div");
+    menuItem.classList.add("mt-3"); // Keep existing structure
+
+    const imageDiv = document.createElement("div");
+    imageDiv.innerHTML = `
+      <div class="flex gap-[10px]">
+        <img src="${item.image}" alt="${item.name}" class="w-[100px] h-[100px] object-cover rounded-md">
+        <div class="w-full">
+          <div class="flex justify-between">
+            <h3 class="text-lg font-bold">${item.name}</h3>
+            <h3 class="text-lg font-bold">${item.price}</h3>
+          </div>
+          <hr class="my-2 border-gray-300">  
+          
+          <!-- Buttons Placeholder -->
+          <div class="buttons-container"></div>
+          
+        </div>
+      </div>
+    `;
+
+    // Creating the buttons
+    const buttonsDiv = document.createElement("div");
+    buttonsDiv.classList.add("mt-4", "flex", "gap-3");
+
+    const addToCartButton = document.createElement("button");
+    addToCartButton.innerHTML = `<img src="./img/shopping-cart (1).png" alt="Add to Cart" class="w-5 h-5 inline-block">`;  
+    addToCartButton.classList.add("bg-green-400", "text-white", "px-2", "py-2", "rounded", "hover:bg-green-600");
+    addToCartButton.addEventListener("click", () => addToCart(item));
+
+    const addToWishlistButton = document.createElement("button");
+    addToWishlistButton.innerHTML = `<img src="./img/favorite.png" alt="Add to Cart" class="w-5 h-5 inline-block">`; 
+    addToWishlistButton.classList.add("bg-[#D75838]", "text-white", "px-2", "py-2", "rounded", "hover:bg-[#b74a2f]");
+    addToWishlistButton.addEventListener("click", () => addToWishlist(item));
+
+    // Append buttons inside the designated container inside `imageDiv`
+    buttonsDiv.appendChild(addToCartButton);
+    buttonsDiv.appendChild(addToWishlistButton);
+
+    const buttonsContainer = imageDiv.querySelector(".buttons-container");
+    buttonsContainer.appendChild(buttonsDiv);
+
+    menuItem.appendChild(imageDiv);
+    menuContainer.appendChild(menuItem);
+  });
+}
+
+
 
   function addToCart(item) {
       const existingItem = cart.find(cartItem => cartItem.id === item.id);
