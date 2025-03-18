@@ -195,3 +195,10 @@ function displayMenu(category) {
 
   displayMenu("lunch"); // Default category
 });
+
+//form
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("clearBtn").addEventListener("click", function () {
+      document.getElementById("myForm").reset();
+  });
+});

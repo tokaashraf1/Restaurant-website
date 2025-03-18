@@ -33,7 +33,7 @@ html {
 @media(max-width:768px) {
 
     .mobile-menu, .header {
-        background-color: #0d1323;
+        background-color:#0d1323 ;
     }
     .home-content{
         margin-top:25%;
