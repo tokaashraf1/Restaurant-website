@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,47 +8,58 @@
     <link href="./output.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- navbar -->
-<header class=" header fixed top-0 left-0 z-50 w-full py-4 bg-transparent">
-    <nav class="w-[90%] mx-auto flex  flex-col items-start md:flex-row md:justify-between md:items-center">
-        <div class="flex md:justify-center md:items-center md:w-auto w-full justify-between">
-      
-               <div class="flex gap-3  items-center">
-                <img src="./img/shrimp.png" class="w-[45px]" alt="">
-                <h1 class="text-[26px] md:text-[20px] lg:text-[30px] font-semibold text-white">ShrimpZone</h1>
-               </div>
-           
-          
-            <div class="hamburger md:hidden font-bold text-xl text-white "> ☰ </div>
-        </div>
-        <ul class=" mobile-menu flex md:justify-center gap-4 mt-9 md:mt-0 md:gap-11  flex-col items-center w-full md:w-auto md:flex-row text-white ">
-            <li ><a class="text-lg hover:font-bold " href="#">Home</a></li>
-            <li><a class="text-lg hover:font-bold " href="./about.html">About</a></li>
-            <li><a class="text-lg hover:font-bold " href="./menu.html">Menu</a></li>
-            <li><a class="text-lg hover:font-bold " href="">Contact</a></li>
-            <button class="md:hidden bg-[#D75838]  text-white px-7 py-2 rounded-full hover:bg-[#b74a2f]">Book a Table</button>
-        </ul>
-        <button class=" bg-[#D75838] text-white px-7 py-2 rounded-full hover:bg-[#b74a2f] hidden md:block">Book a Table</button>
-    </nav>
+    <!-- navbar -->
+    <header class=" header fixed top-0 left-0 z-50 w-full py-4 bg-transparent">
+        <nav class="w-[90%] mx-auto flex  flex-col items-start md:flex-row md:justify-between md:items-center">
+            <div class="flex md:justify-center md:items-center md:w-auto w-full justify-between">
+
+                <div class="flex gap-3  items-center">
+                    <img src="./img/shrimp.png" class="w-[45px]" alt="">
+                    <h1 class="text-[26px] md:text-[20px] lg:text-[30px] font-semibold text-white">ShrimpZone</h1>
+                </div>
+
+
+                <div class="hamburger md:hidden font-bold text-xl text-white "> ☰ </div>
+            </div>
+            <ul
+                class=" mobile-menu flex md:justify-center gap-4 mt-9 md:mt-0 md:gap-11  flex-col items-center w-full md:w-auto md:flex-row text-white ">
+                <li><a class="text-lg hover:font-bold " href="#">Home</a></li>
+                <li><a class="text-lg hover:font-bold " href="./about.html">About</a></li>
+                <li><a class="text-lg hover:font-bold " href="./menu.html">Menu</a></li>
+                <li><a class="text-lg hover:font-bold " href="">Contact</a></li>
+                <button class="md:hidden bg-[#D75838]  text-white px-7 py-2 rounded-full hover:bg-[#b74a2f]">Book a
+                    Table</button>
+            </ul>
+            <button class=" bg-[#D75838] text-white px-7 py-2 rounded-full hover:bg-[#b74a2f] hidden md:block">Book a
+                Table</button>
+        </nav>
     </header>
-    <section class="w-full min-h-screen flex justify-center items-center relative bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('./img/img1.jpg');">
-        
+    <section
+        class="w-full min-h-screen flex justify-center items-center relative bg-cover bg-center bg-no-repeat overflow-hidden"
+        style="background-image: url('./img/img1.jpg');">
+
         <!-- Black Transparent Overlay -->
         <div class="absolute inset-0 bg-[#0F172B] bg-opacity-90 z-10 pointer-events-none"></div>
 
         <!-- Content Inside -->
-        <div class="relative z-20 flex flex-col md:flex-row justify-between items-center text-white   w-[90%] mx-auto home-content">
+        <div
+            class="relative z-20 flex flex-col md:flex-row justify-between items-center text-white   w-[90%] mx-auto home-content">
             <div class="max-w-2xl ">
                 <h1 class=" text-[30px] md:text-[35px] lg:text-[55px] font-bold">Fresh from the Ocean, </h1>
                 <h1 class="text-[30px] md:text-[35px] lg:text-[55px] font-bold">Served with Passion</h1>
                 <p class="mt-7 lg:text-[20px]">
                     Discover the finest seafood, freshly caught and prepared with love. From ocean to plate,
                 </p>
-                <p class="lg:text-[20px]"> we bring you the best flavors of the sea. Taste the freshness, experience the quality,</p>
-                <p class="lg:text-[20px]"> and indulge in the rich, mouthwatering flavors of our expertly crafted dishes.</p>
-                <button class=" border border-[#D75838] text-white px-11 py-3 rounded-full hover:bg-[#D75838] mt-11">Book a Table</button>
+                <p class="lg:text-[20px]"> we bring you the best flavors of the sea. Taste the freshness, experience the
+                    quality,</p>
+                <p class="lg:text-[20px]"> and indulge in the rich, mouthwatering flavors of our expertly crafted
+                    dishes.</p>
+                <button
+                    class=" border border-[#D75838] text-white px-11 py-3 rounded-full hover:bg-[#D75838] mt-11">Book a
+                    Table</button>
             </div>
 
             <!-- Animated Image -->
@@ -58,56 +70,70 @@
 
     </section>
     <!-- cart button -->
-    <button id="cart-button" class=" flex items-center justify-center fixed bottom-[20%] right-8 z-30 rounded-full bg-green-400 px-2 py-2 w-[50px]  hover:bg-green-600 "><img src="./img/shopping-cart (1).png" class="w-[32px]"></button>
-    <button id="wishlist-button"  class=" flex items-center justify-center fixed bottom-[10%] right-8 z-30 rounded-full bg-[#D75838] px-2 py-2 w-[50px] hover:bg-[#b74a2f]"><img src="./img/favorite.png" class="w-[32px]"></button>
+    <button id="cart-button"
+        class=" flex items-center justify-center fixed bottom-[20%] right-8 z-30 rounded-full bg-green-400 px-2 py-2 w-[50px]  hover:bg-green-600 "><img
+            src="./img/shopping-cart (1).png" class="w-[32px]"></button>
+    <button id="wishlist-button"
+        class=" flex items-center justify-center fixed bottom-[10%] right-8 z-30 rounded-full bg-[#D75838] px-2 py-2 w-[50px] hover:bg-[#b74a2f]"><img
+            src="./img/favorite.png" class="w-[32px]"></button>
 
-<!-- about section -->
+    <!-- about section -->
     <section class="w-full pb-[30px] md:pb-[100px]">
-       <div class="w-[90%] mx-auto flex flex-col md:flex-row justify-between mt-[95px]">
-<div class="break-words md:w-[40%]">
-<h1 class="xl:text-[40px] lg:text-[28px] text-[30px] font-semibold">Fresh from the Ocean,Served with Passion </h1>
-<!-- <h1 class="xl:text-[40px] lg:text-[28px]  text-[30px] font-semibold">Served with Passion</h1> -->
-<p class=" xl:text-[18px] mt-4">At ShrimpZone, we take pride in delivering the freshest seafood, sourced daily and expertly prepared to satisfy your cravings. With a passion for quality and flavor, we create a dining experience that’s truly unforgettable. Here’s what makes us special:</p>
-<div class="mt-7">
-<div class="lg:gap-[10px]  hidden lg:flex">
- <img src="./img/checked.png" alt="">
- <p class="xl:text-[18px]">Fresh & Premium Ingredients </p>
-</div>
-<div class="lg:gap-[10px] lg:mt-3  hidden lg:flex">
-    <img src="./img/checked.png" alt="">
-    <p class="xl:text-[18px]"> Authentic Culinary Experience</p>
-   </div>
-   <div class="lg:gap-[10px] lg:mt-3  hidden lg:flex">
-    <img src="./img/checked.png" alt="">
-    <p class="xl:text-[18px]">Exceptional Service</p>
-   </div>
+        <div class="w-[90%] mx-auto flex flex-col md:flex-row justify-between mt-[95px]">
+            <div class="break-words md:w-[40%]">
+                <h1 class="xl:text-[40px] lg:text-[28px] text-[30px] font-semibold">Fresh from the Ocean,Served with
+                    Passion </h1>
+                <!-- <h1 class="xl:text-[40px] lg:text-[28px]  text-[30px] font-semibold">Served with Passion</h1> -->
+                <p class=" xl:text-[18px] mt-4">At ShrimpZone, we take pride in delivering the freshest seafood, sourced
+                    daily and expertly prepared to satisfy your cravings. With a passion for quality and flavor, we
+                    create a dining experience that’s truly unforgettable. Here’s what makes us special:</p>
+                <div class="mt-7">
+                    <div class="lg:gap-[10px]  hidden lg:flex">
+                        <img src="./img/checked.png" alt="">
+                        <p class="xl:text-[18px]">Fresh & Premium Ingredients </p>
+                    </div>
+                    <div class="lg:gap-[10px] lg:mt-3  hidden lg:flex">
+                        <img src="./img/checked.png" alt="">
+                        <p class="xl:text-[18px]"> Authentic Culinary Experience</p>
+                    </div>
+                    <div class="lg:gap-[10px] lg:mt-3  hidden lg:flex">
+                        <img src="./img/checked.png" alt="">
+                        <p class="xl:text-[18px]">Exceptional Service</p>
+                    </div>
 
-   <div class=" lg:gap-[10px] lg:mt-3  hidden lg:flex">
-    <img src="./img/checked.png" alt="">
-    <p class="xl:text-[18px]">Unforgettable Ambiance </p>
-   </div>
-  
-</div>
-</div>
-<div class="relative group transition-transform duration-500 hover:scale-95">
-<img src="./img/about.jpg" alt="" class="md:w-[430px] lg:w-[600px] ">
-<div class="absolute left-5 top-5 w-[70px] h-[70px] z-10 border-l-[5px] border-t-[5px] border-[#D75838] transition-all duration-500"></div>
-<div class="absolute right-5 bottom-5 w-[70px] h-[70px] z-40 border-r-[5px] border-b-[5px] border-[#D75838] transition-all duration-500"></div>
-</div>
-       </div>
+                    <div class=" lg:gap-[10px] lg:mt-3  hidden lg:flex">
+                        <img src="./img/checked.png" alt="">
+                        <p class="xl:text-[18px]">Unforgettable Ambiance </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="relative group transition-transform duration-500 hover:scale-95">
+                <img src="./img/about.jpg" alt="" class="md:w-[430px] lg:w-[600px] ">
+                <div
+                    class="absolute left-5 top-5 w-[70px] h-[70px] z-10 border-l-[5px] border-t-[5px] border-[#D75838] transition-all duration-500">
+                </div>
+                <div
+                    class="absolute right-5 bottom-5 w-[70px] h-[70px] z-40 border-r-[5px] border-b-[5px] border-[#D75838] transition-all duration-500">
+                </div>
+            </div>
+        </div>
 
     </section>
 
-     <!-- Menu Section -->
-     <section id="menu" class="py-12 bg-[#ffbb1c0d]">
+    <!-- Menu Section -->
+    <section id="menu" class="py-12 bg-[#ffbb1c0d]">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold  mb-4  ">Our Menu</h2>
-  
+
             <!-- Menu Buttons -->
             <div class="flex justify-center space-x-4 mb-8 mt-5">
-                <button class="filter-btn border border-[#D75838]  rounded-full px-4 py-2 hover:bg-[#D75838]" data-category="lunch">Dishes</button>
-                <button class="filter-btn  border border-[#D75838]  rounded-full px-4 py-2  hover:bg-[#D75838]" data-category="salad">Salads</button>
-                <button class="filter-btn  border border-[#D75838]  rounded-full px-4 py-2  hover:bg-[#D75838]" data-category="dessert">Desserts</button>
+                <button class="filter-btn border border-[#D75838]  rounded-full px-4 py-2 hover:bg-[#D75838]"
+                    data-category="lunch">Dishes</button>
+                <button class="filter-btn  border border-[#D75838]  rounded-full px-4 py-2  hover:bg-[#D75838]"
+                    data-category="salad">Salads</button>
+                <button class="filter-btn  border border-[#D75838]  rounded-full px-4 py-2  hover:bg-[#D75838]"
+                    data-category="dessert">Desserts</button>
             </div>
 
             <!-- Menu Items -->
@@ -129,7 +155,8 @@
     </div>
 
     <!-- Wishlist Popup -->
-    <div id="wishlist-popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center overflow-auto z-40">
+    <div id="wishlist-popup"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center overflow-auto z-40">
         <div class="bg-white p-6 rounded-lg shadow-lg w-80">
             <h3 class="text-xl font-bold mb-4">Your Wishlist</h3>
             <ul id="wishlist-items" class="space-y-2"></ul>
@@ -140,33 +167,27 @@
     <!-- contact us section -->
     <section class="w-full pb-[30px] md:pb-[100px] mt-[100px] ">
 
-        <div class="w-full py-8 relative bg-cover bg-center bg-no-repeat overflow-hidden "style="background-image: url('./img/food_halls.jpg');">
+        <div class="w-full py-8 relative bg-cover bg-center bg-no-repeat overflow-hidden "
+            style="background-image: url('./img/food_halls.jpg');">
             <div class="absolute inset-0 bg-[#0F172B] bg-opacity-85 z-10 pointer-events-none"></div>
             <p class="text-center text-white font-semibold text-[35px] relative z-20 ">Contact Us For Any Query</p>
             <div class="w-[90%] mx-auto flex flex-col md:flex-row justify-between relative z-20 mt-8 ">
                 <div class="w-[45%] ">
-       
-                    <iframe
-                    width="100%"
-                    height="400"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    class="rounded-lg border-b-4 border-[#D75838]"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=30.9187%2C29.9205%2C30.9787%2C30.0005&layer=mapnik&lang=en">
-                  </iframe>
-                  
-                  
+
+                    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        class="rounded-lg border-b-4 border-[#D75838]"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=30.9187%2C29.9205%2C30.9787%2C30.0005&layer=mapnik&lang=en">
+                    </iframe>
                 </div>
                 <div class="w-[45%] bg-white rounded-lg border-t-4 border-[#D75838]">kkkkkkkkkkkkk</div>
             </div>
         </div>
-     </section>
+    </section>
 
 
-<script src="./data/data.js"></script>
-<script src="./js/script.js"></script>
+    <script src="./data/data.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
+
 </html>
