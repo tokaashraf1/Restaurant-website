@@ -944,6 +944,26 @@ video {
   height: 70px;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[50\] {
+  height: 50;
+}
+
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2273,6 +2293,10 @@ video {
   padding-bottom: 30px;
 }
 
+.pt-\[50px\] {
+  padding-top: 50px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2350,6 +2374,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[50px\] {
+  font-size: 50px;
 }
 
 .font-bold {
@@ -2442,6 +2470,15 @@ video {
 }
 
 .text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-\[white\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }

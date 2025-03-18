@@ -62,32 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let cart = [];
   let wishlist = [];
-
-  // Sample menu data
-  const menuData = [
-    { id: 1, name: "Grilled Salmon", category: "lunch", price: 15.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 2, name: "Garlic Shrimp", category: "lunch", price: 12.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 3, name: "Lobster Tail", category: "lunch", price: 25.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 4, name: "Crab Legs", category: "lunch", price: 20.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 5, name: "Fried Calamari", category: "lunch", price: 10.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 6, name: "Seared Tuna", category: "lunch", price: 18.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-
-    { id: 7, name: "Shrimp Avocado Salad", category: "salad", price: 9.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 8, name: "Crab Caesar Salad", category: "salad", price: 10.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 9, name: "Smoked Salmon Salad", category: "salad", price: 12.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 10, name: "Tuna Poke Bowl", category: "salad", price: 11.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 11, name: "Octopus Salad", category: "salad", price: 14.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 12, name: "Seaweed Salad", category: "salad", price: 8.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-
-    { id: 13, name: "Lemon Butter Cake", category: "dessert", price: 6.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 14, name: "Mango Sorbet", category: "dessert", price: 5.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 15, name: "Coconut Pudding", category: "dessert", price: 7.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 16, name: "Key Lime Pie", category: "dessert", price: 6.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 17, name: "Berry Parfait", category: "dessert", price: 5.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" },
-    { id: 18, name: "Chocolate Lava Cake", category: "dessert", price: 7.99, image: "https://bing.com/th?id=OSK.cc6ea8921424c5e72ca93fd8ad94bc1c" }
-];
-
-
+  
 function displayMenu(category) {
   menuContainer.innerHTML = "";
   const filteredMenu = menuData.filter(item => item.category === category);
