@@ -38,7 +38,9 @@
           <li>
             <a class="text-lg hover:font-bold" href="./menu.html">Menu</a>
           </li>
-          <li><a class="text-lg hover:font-bold" href="">Contact</a></li>
+          <li>
+            <a class="text-lg hover:font-bold" href="./contact.html">Contact</a>
+          </li>
           <button
             class="md:hidden bg-[#D75838] text-white px-7 py-2 rounded-full hover:bg-[#b74a2f]"
           >
@@ -207,12 +209,12 @@
     <!-- Cart Popup -->
     <div
       id="cart-popup"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-40"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-40 overflow-y-scroll"
     >
       <div class="bg-white p-6 rounded-lg shadow-lg w-80">
         <h3 class="text-xl font-bold mb-4">Your Cart</h3>
         <ul id="cart-items" class="space-y-2"></ul>
-        <p id="cart-total" class="font-semibold mt-4">Total: $0.00</p>
+        <p id="cart-total" class="font-semibold mt-4">Total: 0.00</p>
         <button
           id="clear-cart"
           class="bg-red-500 text-white px-4 py-2 rounded mt-4"
@@ -231,7 +233,7 @@
     <!-- Wishlist Popup -->
     <div
       id="wishlist-popup"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center overflow-auto z-40"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center overflow-y-scroll z-40"
     >
       <div class="bg-white p-6 rounded-lg shadow-lg w-80">
         <h3 class="text-xl font-bold mb-4">Your Wishlist</h3>
@@ -314,75 +316,70 @@
         </div>
       </div>
     </section>
-    <footer class="w-full pb-[120px] mt-[80px] bg-[#0d1323]">
-        <div class="w-[90%] mx-auto  pt-[30px] ">        
-            <div class="flex items-center md:items-start md:justify-between flex-col md:flex-row text-white  mt-11">
-        <div class="md:w-[20%]">
-          
+    <footer class="w-full pb-[120px] mt-[10px] bg-[#0d1323]">
+      <div class="w-[90%] mx-auto pt-[30px]">
+        <div
+          class="flex items-center md:items-start md:justify-between flex-col md:flex-row text-white mt-11"
+        >
+          <div class="md:w-[20%]">
             <div class="flex gap-3 items-center">
-                <img src="./img/shrimp.png" class="w-[45px]" alt="" />
-                <h1
-                  class="text-[26px] md:text-[20px] lg:text-[30px] font-semibold text-white"
-                >
-                  ShrimpZone
-                </h1>
-              </div>
+              <img src="./img/shrimp.png" class="w-[45px]" alt="" />
+              <h1
+                class="text-[26px] md:text-[20px] lg:text-[30px] font-semibold text-white"
+              >
+                ShrimpZone
+              </h1>
+            </div>
 
-        <p class="mt-5 text-[14px] text-[#D1D1D1]" >
-            Fresh from the Ocean,Served with Passion</p>
-            <div class="mt-5 md:mt-10 flex justify-center md:ml-10 md:justify-start gap-[20px]">
-        <div class=" px-2 py-1 flex items-center justify-center">
-            <img src="./img/facebook.png" >
-        </div>
-        <div class=" px-1 py-1 flex items-center justify-center">
-            <img src="./img/twitter.png" >
-        </div>
-        <div class=" px-1 py-1 flex items-center justify-center">
-            <img src="./img/instagram.png" >
-        </div>
-            </div>
-        
-        </div>
-        
-        <div class="md:w-[20%] text-[#D1D1D1] mt-5 md:mt-0"><p class="text-[white]"> Contact
-        </p>
-        <div class="text-[14px]">
-                <p class="mt-5">
-                    info@example.com
-                </p>
-                <p class="mt-4">
-                    +012 345 67890
-                </p>
-                <p class="mt-4">
-                    6th of October
-                </p>
-        </div>
-        </div>
-        
-        <div class="md:w-[20%] text-[#D1D1D1] mt-5 md:mt-0">
-        <p class="text-[white]"> Opening</p>
-        <div class="text-[14px]">
-            <p class="mt-5">
-                Monday - Saturday
+            <p class="mt-5 text-[14px] text-[#D1D1D1]">
+              Fresh from the Ocean,Served with Passion
             </p>
-            <p class="mt-4">
-                9AM - 9PM
-            </p>
-          
-        </div>
-        </div>
-        
-        <div class="md:w-[15%] text-[14px] text-[#D1D1D1] mt-5 md:mt-0">
-        <p class="text-[white] text-[16px] text-center md:text-start mr-10 md:mr-0"> 
-            About Us 
-        </p>
-        <p class="mt-5 text-center md:text-start">
-            Delicious meals made with love. Visit us for an unforgettable dining experience!
-        </p>
-        </div>
+            <div
+              class="mt-5 md:mt-10 flex justify-center md:ml-10 md:justify-start gap-[20px]"
+            >
+              <div class="px-2 py-1 flex items-center justify-center">
+                <img src="./img/facebook.png" />
+              </div>
+              <div class="px-1 py-1 flex items-center justify-center">
+                <img src="./img/twitter.png" />
+              </div>
+              <div class="px-1 py-1 flex items-center justify-center">
+                <img src="./img/instagram.png" />
+              </div>
             </div>
+          </div>
+
+          <div class="md:w-[20%] text-[#D1D1D1] mt-5 md:mt-0">
+            <p class="text-[white]">Contact</p>
+            <div class="text-[14px]">
+              <p class="mt-5">info@example.com</p>
+              <p class="mt-4">+012 345 67890</p>
+              <p class="mt-4">6th of October</p>
+            </div>
+          </div>
+
+          <div class="md:w-[20%] text-[#D1D1D1] mt-5 md:mt-0">
+            <p class="text-[white]">Opening</p>
+            <div class="text-[14px]">
+              <p class="mt-5">Monday - Saturday</p>
+              <p class="mt-4">9AM - 9PM</p>
+            </div>
+          </div>
+
+          <div class="md:w-[15%] text-[14px] text-[#D1D1D1] mt-5 md:mt-0">
+            <p
+              class="text-[white] text-[16px] text-center md:text-start mr-10 md:mr-0"
+            >
+              About Us
+            </p>
+            <p class="mt-5 text-center md:text-start">
+              Delicious meals made with love. Visit us for an unforgettable
+              dining experience!
+            </p>
+          </div>
         </div>
-         </footer>
+      </div>
+    </footer>
     <script src="./data/data.js"></script>
     <script src="./js/script.js"></script>
   </body>
