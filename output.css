@@ -841,24 +841,16 @@ video {
   margin-top: 100px;
 }
 
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
 .mt-\[30px\] {
   margin-top: 30px;
 }
 
-.mt-\[40px\] {
-  margin-top: 40px;
-}
-
 .mt-\[95px\] {
   margin-top: 95px;
-}
-
-.mt-\[0px\] {
-  margin-top: 0px;
-}
-
-.mt-\[10px\] {
-  margin-top: 10px;
 }
 
 .box-border {
@@ -3145,6 +3137,10 @@ video {
 
   .md\:pb-\[100px\] {
     padding-bottom: 100px;
+  }
+
+  .md\:pb-\[50px\] {
+    padding-bottom: 50px;
   }
 
   .md\:text-start {
