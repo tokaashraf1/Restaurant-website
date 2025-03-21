@@ -10,6 +10,6 @@ https://tokaashraf1.github.io/Restaurant-website/
 
 <div class="flex justify-between">
  <img src="img/fullScreen.jpeg" alt="img" width="500" />
- <img src="img/aboutScreen.jpeg" alt="img" width="300" />
-<img src="img/menuScreen.jpeg" alt="img" width="300" />
+ <img src="img/aboutScreen.jpeg" alt="img" width="500" />
+<img src="img/menuScreen.jpeg" alt="img" width="500" />
     </div>
